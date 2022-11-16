@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">SimpleAirbnb</span>
+</nav>
+
+<h2>All our flats (<%= @flats.count %>)</h2>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <% @flats.each do |flat| %>
+    <h5 class="card-title"><%= flat.name %></strong></h5>
+    <p class="card-text"><%= flat.address %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= flat.description %></li>
+
+    <li class="list-group-item"><i class="fa-solid fa-users"></i><%= flat.number_of_guests %></li>
+    <li class="list-group-item"><i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">More Info</a>
+    <a href="#" class="card-link">Edit</a>
+    <%end %>
+  </div>
+</div>
